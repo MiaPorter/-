@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Pobeda';
+    color: #EEEEEE;
+}
+@font-face {
+    font-family: 'Pobeda';
+    src: url('../fonts/ofont.ru_Pobeda_bold.ttf');
+}
+@font-face {
+    font-family: 'Pobeda_Regular';
+    src: url('../fonts/ofont.ru_Pobeda.ttf');
+}
+
+body {
+    background-color: #161616;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    justify-content: space-around;
+    margin-top: 20px;
+    font-size: 26px;
+    margin-left: -10px;
+}
+.headerLeft {
+    margin-top: 7px;
+}
+.headerMiddle {
+    width: 743px;
+    height: 75px;
+    background-image: url(images/блокДляШапки.png);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: space-around;
+    margin-left: -30px;
+}
+.headerMiddle a, .headerRight a {
+    padding-top: 22px;
+    text-decoration: none;
+}
+.headerRight {
+    width: 98px;
+    height: 75px;
+    background-color: #FA6312;
+    display: flex;
+    justify-content: space-around;
+    transition: 0.3s ease;
+}
+.headerRight:hover {
+    background-color: #c24a09;
+}
+.headerMiddle a:after {
+    content: "";
+    background-color: #eae2dd;
+    display: block;
+    height: 2px;
+    width: 0%;
+    transition: 0.3s ease-in-out;
+}
+.headerMiddle a:hover:after {
+    width: 100%;
+}
+
+.mainOne {
+    width: 100%;
+    height: 736px;
+}
+.image {
+    background-image: url(images/домНачало.png);
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-position: center;
+    width: 100%;
+    height: 736px;
+}
+.textMainOne {
+    width: 800px;
+    margin-left: 635px;
+    margin-top: -510px;
+    font-size: 50px;
+    text-align: right;
+}
+.textTwo {
+    margin-top: -16px;
+}
+h1 span {
+    color: #FA6312;
+}
+button {
+    width: 356px;
+    height: 90px;
+    background-color: #FA6312;
+    font-size: 37px;
+    margin-left: 1069px;
+    margin-top: 25px;
+    border: none;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #c24a09;
+}
+.textLeftBottom {
+    display: flex;
+    font-size: 26px;
+    margin-left: 77px;
+    margin-top: 50px;
+}
+.textLeftBottom p {
+    width: 120px;
+}
+.textLeftBottom img {
+    margin-top: 13px;
+    margin-right: 10px;
+}
+.imgArrow {
+    margin-left: 740px;
+    margin-top: -100px;
+    animation: arrowMove 1.5s ease-in-out infinite;
+}
+@keyframes arrowMove {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(25px);
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* @media screen and (max-width: 1200px) {
+    header {
+        font-size: 22px;
+        margin-left: 0;
+    }
+    .headerMiddle {
+        width: 650px;
+        margin-left: -20px;
+    }
+    .headerLeft img {
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    header {
+        font-size: 20px;
+        height: 90px;
+        margin-top: 15px;
+    }
+    .headerMiddle {
+        width: 580px;
+        height: 70px;
+        margin-left: -15px;
+    }
+    .headerRight {
+        width: 90px;
+        height: 70px;
+    }
+    .headerLeft img {
+        width: 180px;
+    }
+    .headerMiddle a, .headerRight a {
+        padding-top: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        font-size: 18px;
+        height: 80px;
+        margin-top: 10px;
+        justify-content: space-around;
+        padding: 0 20px;
+    }
+    .headerMiddle {
+        opacity: 0;
+        order: 3;
+    }
+    .headerRight {
+        width: 80px;
+        height: 60px;
+    }
+    .headerLeft img {
+        width: 160px;
+    }
+    .headerMiddle a, .headerRight a {
+        padding-top: 15px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        flex-wrap: wrap;
+        height: auto;
+        position: relative;
+        margin-left: 70px;
+        padding: 10px 15px;
+        justify-content: space-around;
+    }
+    .headerLeft {
+        width: 100%;
+        text-align: center;
+        margin-top: 25px;
+    }
+    .headerRight {
+        width: 80px;
+        height: 50px;
+        margin-left: -80px;
+        margin-top: 20px;
+    }
+    .headerMiddle a, .headerRight a {
+        padding-top: 12px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        padding: 10px;
+        margin-left: -80px;
+    }
+    .headerMiddle {
+        height: 45px;
+        font-size: 14px;
+    }
+    .headerRight {
+        width: 70px;
+        height: 45px;
+    }
+    .headerLeft img {
+        width: 140px;
+    }
+    .headerMiddle a, .headerRight a {
+        padding-top: 10px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .headerMiddle {
+        font-size: 12px;
+        height: 40px;
+    }
+    .headerRight {
+        width: 60px;
+        height: 40px;
+        font-size: 14px;
+    }
+    .headerLeft img {
+        width: 120px;
+    }
+    .headerRight a {
+        padding-top: 10px;
+    }
+} */
