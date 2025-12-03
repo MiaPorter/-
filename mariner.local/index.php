@@ -40,12 +40,46 @@
         <h1><span>новая жизнь</span> там,</h1>
         <h1 class="textTwo">где новый дом</h1>
     </div>
-    <button>выбрать квартиру</button>
+    <button id="chooseApartment">выбрать квартиру</button>
     <div class="textLeftBottom">
         <img src="images/Location.png" alt="" height="30px">
         <p>12 минут до олимпа</p>
     </div>
     <img src="images/Down.png" alt="" class="imgArrow">
+</div>
+
+<div class="mainTwo">
+    <div class="mainTwoFirstBlock">
+        <div class="mainTwoFirstBlockLeft">
+            <div class="textOne">
+                <h2>01</h2>
+                <h2>2024</h2>
+                <p>год основания</p>
+            </div>
+        </div>
+        <div class="mainTwoFirstBlockRight">
+            <div class="imgOne">
+                <img src="images/счастливаяСемья.png" alt="" width="220px">
+                <img src="images/картинкаКафешек.png" alt="" width="500px">
+            </div>
+        </div>
+    </div>
+    <div class="mainTwoSecondBlock">
+        <div class="mainTwoSecondBlockLeft">
+            
+        </div>
+        <div class="mainTwoSecondBlockRight">
+            <div class="textTwo">
+                <h2>02</h2>
+                <h2>9</h2>
+                <p>участков с домами</p>
+            </div>
+        </div>
+    </div>
+    <div class="mainTwoThirdBlock">
+        <div class="mainTwoThirdBlockLeft"></div>
+        <div class="mainTwoThirdBlockRight"></div>
+    </div>
 </div>
 
 <script src="java.js"></script>
