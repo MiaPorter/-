@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Pobeda';
+    color: #EEEEEE;
+}
+@font-face {
+    font-family: 'Pobeda';
+    src: url('../fonts/ofont.ru_Pobeda_bold.ttf');
+}
+@font-face {
+    font-family: 'Pobeda_Regular';
+    src: url('../fonts/ofont.ru_Pobeda.ttf');
+}
+
+body {
+    background-color: #161616;
+}
+
+header {
+    display: flex;
+    width: 80%;
+    height: 100px;
+    position: fixed;
+    justify-content: space-between;
+    margin-top: 30px;
+    font-size: 32px;
+    margin-left: 150px;
+    z-index: 100000;
+}
+.headerLeft {
+    margin-top: 7px;
+}
+.headerRight {
+    width: 183px;
+    height: 76px;
+    background-color: #FA6312;
+    display: flex;
+    justify-content: space-around;
+    transition: 0.3s ease;
+}
+.headerRight:hover {
+    background-color: #c24a09;
+}
+.headerRight a {
+    text-decoration: none;
+    padding-top: 20px;
+}
+
+.mainPanorama {
+    background-image: url(images/панорамаЛендинг.png);
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-position: center;
+    width: 100%;
+    height: 815px;
+    display: flex;
+    justify-content: center;
+    gap: 0px;
+    transition: background-image 0.5s ease;
+}
+
+.mainPanorama button {
+    width: 115px;
+    height: 76px;
+    margin: 0;
+    margin-top: 660px;
+    border: none;
+    background-color: #FA6312;
+    font-size: 30px;
+    color: #EEEEEE;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Стиль для активной кнопки */
+.mainPanorama button.active {
+    background-color: #EEEEEE;
+    color: #FA6312;
+}
+
+/* Стиль для неактивных кнопок */
+.mainPanorama button:not(.active) {
+    background-color: #FA6312;
+    color: #EEEEEE;
+}
+
+/* Эффект при наведении на неактивную кнопку */
+.mainPanorama button:not(.active):hover {
+    background-color: #c24a09;
+}
+
+/* Эффект при наведении на активную кнопку */
+.mainPanorama button.active:hover {
+    background-color: #dcdcdc;
+}
