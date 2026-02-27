@@ -57,11 +57,40 @@ header {
     display: flex;
     justify-content: center;
     gap: 0px;
+    transition: background-image 0.5s ease;
 }
+
 .mainPanorama button {
     width: 115px;
     height: 76px;
     margin: 0;
     margin-top: 660px;
     border: none;
+    background-color: #FA6312;
+    font-size: 30px;
+    color: #EEEEEE;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Стиль для активной кнопки */
+.mainPanorama button.active {
+    background-color: #EEEEEE;
+    color: #FA6312;
+}
+
+/* Стиль для неактивных кнопок */
+.mainPanorama button:not(.active) {
+    background-color: #FA6312;
+    color: #EEEEEE;
+}
+
+/* Эффект при наведении на неактивную кнопку */
+.mainPanorama button:not(.active):hover {
+    background-color: #c24a09;
+}
+
+/* Эффект при наведении на активную кнопку */
+.mainPanorama button.active:hover {
+    background-color: #dcdcdc;
 }

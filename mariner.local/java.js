@@ -115,3 +115,11 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     new Carousel();
 });
+
+function copyAndFeedback(element, text) {
+    navigator.clipboard.writeText(text);
+    element.classList.add('copied');
+    setTimeout(() => {
+        element.classList.remove('copied');
+    }, 200);
+}

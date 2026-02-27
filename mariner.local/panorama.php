@@ -13,16 +13,16 @@
         <a href="#"><img src="images/логотип.png" alt="" width="240px"></a>
     </div>
     <div class="headerRight">
-        <a href="#">назад</a>
+        <a href="index.php">назад</a>
     </div>
 </header>
 
-<div class="mainPanorama">
-    <button>день</button>
-    <button>ночь</button>
+<div class="mainPanorama" id="panorama">
+    <button class="day-btn active" data-image="images/панорамаЛендинг.png">день</button>
+    <button class="night-btn" data-image="images/панорамаЛендингНочь.png">ночь</button>
 </div>
 
-
+<script src="javaPanorama.js"></script>
     
 </body>
 </html>
