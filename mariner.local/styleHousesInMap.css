@@ -1,0 +1,392 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Pobeda';
+    color: #EEEEEE;
+}
+@font-face {
+    font-family: 'Pobeda';
+    src: url('../fonts/ofont.ru_Pobeda_bold.ttf');
+}
+@font-face {
+    font-family: 'Pobeda_Regular';
+    src: url('../fonts/ofont.ru_Pobeda.ttf');
+}
+
+body {
+    background-color: #161616;
+    overflow-x: hidden;
+}
+
+header {
+    position: fixed;
+    width: 1400px;
+    left: 0;
+    right: 0;
+    margin: 20px auto;
+    display: flex;
+    height: 100px;
+    justify-content: space-between;
+    margin-top: 30px;
+    font-size: 26px;
+}
+.headerLeft {
+    margin-top: 7px;
+}
+.headerRight {
+    display: flex;
+    gap: 30px;
+}
+.headerRight .menu {
+    width: 98px;
+    height: 55px;
+    background-color: #FA6312;
+    display: flex;
+    justify-content: space-around;
+    transition: 0.3s ease;
+}
+.parameters {
+    width: 268px;
+    height: 55px;
+    background-color: #FA6312;
+    display: flex;
+    justify-content: space-around;
+    transition: 0.3s ease;
+}
+.headerRigh .menu:hover, .headerRigh .parameters:hover {
+    background-color: #c24a09;
+}
+.headerRight a {
+    padding-top: 22px;
+    text-decoration: none;
+}
+
+.mainOne {
+    width: 100%;
+    height: 736px;
+}
+.image {
+    background-image: url(images/housesInMap.png);
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-position: center;
+    width: 100%;
+    height: 1015px;
+}
+.one {
+    position: absolute;
+    top: 186px;
+    margin-left: 100px;
+    opacity: 0;
+    transition: 0.3s;
+}
+.two {
+    position: absolute;
+    top: 118px;
+    margin-left: 460px;
+    opacity: 0;
+    transition: 0.3s;
+}
+.three {
+    position: absolute;
+    top: 60px;
+    margin-left: 765px;
+    opacity: 0;
+    transition: 0.3s;
+}
+.four {
+    position: absolute;
+    top: 399px;
+    margin-left: 267px;
+    opacity: 0;
+    transition: 0.3s;
+}
+.five {
+    position: absolute;
+    top: 225px;
+    margin-left: 734px;
+    opacity: 0;
+    transition: 0.3s;
+}
+.six {
+    position: absolute;
+    top: 97px;
+    margin-left: 1029px;
+    opacity: 0;
+    transition: 0.3s;
+}
+.seven {
+    position: absolute;
+    top: 539px;
+    margin-left: 652px;
+    opacity: 0;
+    transition: 0.3s;
+}
+.eight {
+    position: absolute;
+    top: 351px;
+    margin-left: 1072px;
+    opacity: 0;
+    transition: 0.3s;
+}
+.nine {
+    position: absolute;
+    top: 161px;
+    margin-left: 1302px;
+    opacity: 0;
+    transition: 0.3s;
+}
+.one:hover, .two:hover, .three:hover, .four:hover, .five:hover, .six:hover, .seven:hover, .eight:hover, .nine:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+.infoOne {
+    width: 197px;
+    height: 310px;
+    background-color: #FA6312;
+    position: absolute;
+    top: 300px;
+    opacity: 0;
+    transition: 0.3s;
+}
+.infoOneTop {
+    width: 150px;
+    margin-top: 17px;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+.top h2 {
+    font-size: 60px;
+}
+.top h3 {
+    font-size: 30px;
+    width: 50px;
+}
+.bottom p {
+    font-size: 25px;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+.one:hover ~ .infoHouses .infoOne {
+    opacity: 1;
+}
+
+footer {
+    background-color: #282828;
+    height: 470px;
+    margin-top: 200px;
+}
+.footerTop {
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.messengers {
+    margin-left: 30px;
+    margin-top: 30px;
+}
+.footerTopLeft .messengers {
+    display: flex;
+    justify-content: space-between;
+    width: 220px;
+}
+.footerTopLeft .logoFooter img {
+    padding-top: 50px;
+}
+.footerTopMiddle .click {
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.footerTopMiddle .click.copied {
+    color: #c24a09;
+    cursor: default;
+}
+.footerTopMiddle h3 {
+    color: #FA6312;
+    font-size: 53px;
+}
+.footerTopMiddle p {
+    font-size: 23px;
+    margin-bottom: 12px;
+}
+.footerTopMiddle .pOne {
+    margin-top: 20px;
+}
+.footerTopRight {
+    width: 400px;
+    margin-top: 40px;
+}
+.footerTopRight h3 {
+    color: #FA6312;
+    font-size: 53px;
+}
+.footerTopRight form {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    color: #FA6312;
+}
+form input {
+    width: 308px;
+    height: 77px;
+    border: none;
+    background-color: #EEEEEE;
+    color: #FA6312;
+    font-size: 30px;
+    padding-left: 20px;
+}
+input::placeholder {
+    font-size: 30px;
+    color: #F69661;
+}
+form button {
+    width: 66px;
+    height: 77px;
+    border: none;
+    background-color: #FA6312;
+}
+.footerBottom {
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 130px;
+    margin-right: 110px;
+    font-size: 23px;
+}
+.footerBottomRight {
+    display: flex;
+    justify-content: space-around;
+}
+.footerBottomRight img {
+    margin-top: -25px;
+}
+.footerBottomRight a {
+    text-decoration: none;
+}
+
+/* АДАПТИВ */
+
+@media (min-width: 1700px) {
+    header {
+        width: 90%;
+    }
+    .image {
+        height: 900px;
+    }
+    .infoOne {
+        top: 350px;
+    }
+}
+
+@media (max-width: 1024px) {
+    header {
+        width: 90%;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        gap: 10px;
+    }
+    .headerRight {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .mainOne {
+        height: auto;
+    }
+    .image {
+        height: 600px;
+    }
+    .houseItem img {
+        transform: scale(0.7);
+    }
+    .infoOne {
+        width: 160px;
+        height: 260px;
+        top: 250px;
+    }
+    .top h2 {
+        font-size: 40px;
+    }
+    .top h3 {
+        font-size: 20px;
+    }
+    .bottom p {
+        font-size: 18px;
+    }
+    footer {
+        height: auto;
+        padding-bottom: 30px;
+    }
+    .footerTop {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    .footerBottom {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        margin: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        width: 95%;
+        font-size: 18px;
+    }
+    .headerRight a {
+        padding-top: 10px;
+        height: 40px;
+    }
+    .parameters {
+        width: 200px;
+        height: 40px;
+    }
+    .menu {
+        width: 80px;
+        height: 40px;
+    }
+    .image {
+        height: 400px;
+    }
+    .houseItem img {
+        transform: scale(0.5);
+    }
+    .one, .two, .three, .four, .five, .six, .seven, .eight, .nine {
+        margin-left: 0;
+    }
+    .infoOne {
+        width: 140px;
+        height: 220px;
+        top: 200px;
+        left: 10px;
+    }
+    .top h2 {
+        font-size: 30px;
+    }
+    .top h3 {
+        font-size: 18px;
+    }
+    .bottom p {
+        font-size: 16px;
+    }
+    .footerTopMiddle h3,
+    .footerTopRight h3 {
+        font-size: 30px;
+    }
+    .footerTopMiddle p {
+        font-size: 16px;
+    }
+    form input {
+        width: 200px;
+        height: 50px;
+        font-size: 18px;
+    }
+    form button {
+        height: 50px;
+    }
+}
+

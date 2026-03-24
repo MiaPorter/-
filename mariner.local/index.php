@@ -351,7 +351,7 @@
 <div class="mainEight" id="mainEight">
     <h2>Выбери свой <span>дом</span></h2>
     <div class="btns">
-        <button class="btn-left"><a href="panorama.php">выбрать на карте</a></button>
+        <button class="btn-left"><a href="housesInMap.php">выбрать на карте</a></button>
         <button class="btn-right"><a href="housesParameters.php">подбор по параметрам</a></button>
     </div>
 </div>

@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Pobeda';
+    color: #EEEEEE;
+}
+@font-face {
+    font-family: 'Pobeda';
+    src: url('../fonts/ofont.ru_Pobeda_bold.ttf');
+}
+@font-face {
+    font-family: 'Pobeda_Regular';
+    src: url('../fonts/ofont.ru_Pobeda.ttf');
+}
+
+body {
+    background-color: #161616;
+}
+
+header {
+    display: flex;
+    width: 90%;
+    height: 100px;
+    position: fixed;
+    justify-content: space-between;
+    margin-top: 30px;
+    font-size: 32px;
+    margin-left: 70px;
+    z-index: 100000;
+    top: 0;
+}
+.headerLeft {
+    margin-top: 7px;
+}
+.headerRight {
+    width: 183px;
+    height: 76px;
+    background-color: #FA6312;
+    display: flex;
+    justify-content: space-around;
+    transition: 0.3s ease;
+}
+.headerRight:hover {
+    background-color: #c24a09;
+}
+.headerRight a {
+    text-decoration: none;
+    padding-top: 20px;
+}
+
+.mainOne {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: left;
+    margin-top: 200px;
+    padding-bottom: 100px;
+}
+.mainOneRight {
+    margin-top: 50px;
+}
+.mainOneRight h2 {
+    width: 900px;
+    font-size: 100px;
+    margin-left: 80px;
+}
+.mainOneRight h2 span {
+    color: #FA6312;
+}
+
+.mainTwo {
+    margin-left: 30px;
+    margin-top: -50px;
+}
+.mainTwo h2 {
+    font-size: 60px;
+    color: #FA6312;
+}
+.mainTwo form {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+.mainTwo form input, .mainTwo form button {
+    width: 350px;
+    height: 80px;
+    border: none;
+}
+.mainTwo form input {
+    padding-left: 10px;
+    font-size: 27px;
+    color: #c24a09;
+    background-color: #EEEEEE;
+}
+.mainTwo form input::placeholder {
+    color: #F69661;
+}
+.mainTwo form button {
+    background-color: #FA6312;
+    font-size: 27px;
+    color: #EEEEEE;
+    cursor: pointer;
+}
+
+.mainThree {
+    margin-left: 30px;
+    margin-top: 100px;
+}
+.mainThree h2 {
+    font-size: 60px;
+    color: #FA6312;
+}
+.mainThree table {
+    border: 2px solid #EEEEEE;
+    font-size: 24px;
+    margin-top: 40px;
+    width: 80%;
+    text-align: center;
+}
+.mainThree table tr {
+    height: 70px;
+}
+.mainThree table tr:first-child {
+    background-color: #EEEEEE;
+}
+.mainThree table th {
+    color: #FA6312;
+    padding: 10px;
+}
+.mainThree table td {
+    background-color: #fa631289;
+}
+.mainThree table tr:nth-child(even) {
+    background-color: #663d27;
+}
+.mainThree table td input, .mainThree table td button {
+    background-color: #fa631200;
+    border: none;
+    font-size: 20px;
+    margin-left: 8px;
+}
+.mainThree table td button {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+.mainThree table td button:hover {
+    cursor: pointer;
+    color: #fafa12;
+}
+.mainThree table a {
+    text-decoration: none;
+}
+.mainThree table a:hover {
+    color: #5e0d0c;
+}

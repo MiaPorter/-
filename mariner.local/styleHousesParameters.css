@@ -72,6 +72,119 @@ header {
     margin-top: 10px;
 }
 
+.filters {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.filterRooms p, .filterFloors p, .filterDecoration p, .filtersCount p, .filtersArea p {
+    font-size: 35px;
+}
+form {
+    margin-top: 60px;
+}
+.btnsRooms a, .btnsFloors a, .filterDecoration a {
+    width: 100px;
+    height: 50px;
+    padding: 25px 50px 25px 50px;
+    background-color: #FA6312;
+    border: none;
+    text-decoration: none;
+    font-size: 25px;
+    margin-right: 15px;
+    transition: 0.3s;
+}
+.btnsRooms a:hover, .btnsFloors a:hover, .filterDecoration a:hover {
+    background-color: #c24a09;
+}
+.filterFloors, .filterDecoration {
+    margin-top: 100px;
+}
+.filtersCount, .filtersArea {
+    color: white;
+    width: 600px;
+}
+.priceInputs, .areaInputs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.priceInputs div, .areaInputs div {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.priceInputs input, .areaInputs input {
+    width: 150px;
+    height: 50px;
+    border: 2px solid #FA6312;
+    background: transparent;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+}
+.range-slider {
+    position: relative;
+    height: 40px;
+}
+.range-slider input[type="range"] {
+    position: absolute;
+    width: 100%;
+    pointer-events: none;
+    appearance: none;
+    background: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+    pointer-events: all;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #FA6312;
+    cursor: pointer;
+}
+.range-slider {
+    position: relative;
+    height: 50px;
+}
+.slider-track, .slider-track-area {
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background: #444;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 3px;
+}
+.range-slider input[type="range"] {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    background: none;
+    pointer-events: none;
+    appearance: none;
+}
+.filtersArea {
+    margin-top: 40px;
+}
+.filtersRight .sbrosFilters {
+    margin-top: 800px;
+    margin-left: -855px;
+    font-size: 20px;
+    text-decoration: none;
+    color: #7c7c7c;
+}
+form button {
+    width: 100px;
+    height: 50px;
+    padding: 25px 120px 25px 50px;
+    background-color: #FA6312;
+    border: none;
+    text-decoration: none;
+    font-size: 25px;
+    transition: 0.3s;
+    margin-top: 20px;
+}
+
 .mainTwo {
     width: 100%;
     margin-top: 200px;
@@ -118,14 +231,29 @@ header {
     object-fit: contain;
 }
 .houseDescription {
-    display: flex;
-    justify-content: space-around;
+    margin-top: 15px;
 }
-
+.descTop {
+    display: flex;
+    justify-content: space-between;
+}
+.params {
+    display: flex;
+    gap: 40px;
+}
+.decoration {
+    margin-top: 15px;
+}
+.arrow {
+    position: absolute;
+    margin-left: 360px;
+    margin-top: 20px;
+}
 
 footer {
     background-color: #282828;
     height: 470px;
+    margin-top: 200px;
 }
 .footerTop {
     padding-top: 50px;
