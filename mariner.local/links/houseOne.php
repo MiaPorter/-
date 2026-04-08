@@ -1,3 +1,41 @@
+<?php
+
+    $link = mysqli_connect('MySQL-8.0', 'root', '', 'marinerHouses') 
+    or die('Ошибка подключения к БД');
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['email_user'])) {
+        if (!$link->connect_error) {
+            $name = $link->real_escape_string($_POST['name_user']);
+            $phone = $link->real_escape_string($_POST['phone_number']);
+            $email = $link->real_escape_string($_POST['email_user']);
+
+            $query = "INSERT INTO buyHouse (name_user, phone_number, email_user, created_at) 
+            VALUES ('$name', '$phone', '$email', NOW())
+            ";
+
+            if ($link->query($query)) {
+                echo "<script>alert('Спасибо! Заявка отправлена 🚀');</script>";
+            } else {
+                echo "<script>alert('Ошибка при отправке');</script>";
+            }
+            $link->close();
+        }
+    }
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['email'])) {
+        if (!$link->connect_error) {
+            $email = $link->real_escape_string($_POST['email']);
+            $link->query("INSERT INTO feedback (email) VALUES ('$email')");
+            $link->close();
+            
+            echo "<script>console.log('Email сохранен: " . addslashes($_POST['email']) . "');</script>";
+            echo "<script>alert('Спасибо! Ваш email отправлен нам. В течение суток мы с вами свяжемся!');</script>";
+        }
+    }
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,13 +65,13 @@
             <h2>32 567 213 559 ₽</h2>
         </div>
         <div class="mainOneRightMiddle">
-            <h2><span>2</span> этаж</h2>
+            <h2><span>1</span> этаж</h2>
             <h2><span>отделка</span> дизайнерская</h2>
             <h2><span>2</span> комнат</h2>
-            <h2><span>192</span> М²</h2>    
+            <h2><span>128</span> М²</h2>    
         </div>
         <div class="mainOneRightBottom">
-            <a href="#" class="parameters">ЗАКАЗАТЬ ЗВОНОК</a>
+            <a href="#" class="parameters" id="parameters">ЗАКАЗАТЬ ЗВОНОК</a>
         </div>
     </div>
 </div>
@@ -123,19 +161,13 @@
 <div class="mainFour" id="mainFour">
     <div class="mainFourCarousel">
         <div class="mainFourSlide">
-            <img src="images/карусель1.png" alt="">
-            <div class="mainFourSlideText active">Современная марсианская элегантность</div>
-            <div class="mainFourSlideTextTwo active">Архитектура домов сочетает футуризм и минимализм, создавая гармонию между технологичностью и уютом. Кубические формы с плавными углами выглядят монументально и лаконично. Панорамные стеклянные фасады открывают обзор на горизонт и звёздное небо, наполняя пространство мягким внутренним светом, который будто растворяет грань между интерьером и внешним миром.</div>
+            <img src="../images/decorationOne.png" alt="">
         </div>
         <div class="mainFourSlide">
-            <img src="images/карусель2.png" alt="">
-            <div class="mainFourSlideText">Интеллектуальная форма комфорта</div>
-            <div class="mainFourSlideTextTwo active">Каждый дом представляет собой идеальный баланс эстетики и функциональности. Прочные материалы, адаптированные к марсианским условиям, соседствуют с тёплым интерьерным освещением, создавая атмосферу защищённости и уюта. Разноуровневая застройка — от одноэтажных компактных модулей до просторных двухэтажных резиденций — формирует динамичную структуру поселения, где каждый элемент подчеркивает единую философию: жизнь на другой планете может быть не только возможной, но и по-настоящему красивой.</div>
+            <img src="../images/decorationTwo.png" alt="">
         </div>
         <div class="mainFourSlide">
-            <img src="images/карусель3.png" alt="">
-            <div class="mainFourSlideText">Свет как элемент вашей жизни</div>
-            <div class="mainFourSlideTextTwo active">Подсветка играет ключевую роль в архитектурной концепции района. Тонкие линии тёплого света очерчивают границы участков и создают ощущение живого дыхания посёлка среди тёмной марсианской равнины. Свет не только украшает, но и выполняет навигационную функцию, подчёркивая структуру застройки и обеспечивая безопасность передвижения. Вечером он превращает поселение в сияющий оазис цивилизации, словно напоминая, что даже на другой планете человек несёт с собой тепло и уют своего дома.</div>
+            <img src="../images/decorationThree.png" alt="">
         </div>
     </div>
     <div class="mainFourCarouselIndicators">
@@ -181,6 +213,19 @@
         </div>
     </div>
 </footer>
+
+<div class="modal" id="modal">
+    <div class="modalContent">
+        <button class="closeBtn" id="closeModal">✕</button>
+        <h2>ЗАКАЗАТЬ ЗВОНОК</h2>
+        <form method="POST">
+            <input type="text" name="name_user" placeholder="Ваше имя" required>
+            <input type="tel" name="phone_number" placeholder="Телефон" required>
+            <input type="email" name="email_user" placeholder="Email" required>
+            <button type="submit" class="sendBtn">Отправить</button>
+        </form>
+    </div>
+</div>
 
 <script src="javaHouseOne.js"></script>
     

@@ -123,3 +123,30 @@ function copyAndFeedback(element, text) {
         element.classList.remove('copied');
     }, 200);
 }
+
+const menuBtn = document.querySelector(".headerRight a");
+const menuModal = document.getElementById("menuModal");
+const closeMenu = document.getElementById("closeMenu");
+const header = document.getElementById("header");
+
+menuBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    menuModal.classList.add("active");
+    header.classList.add("headerHidden");
+});
+
+closeMenu.addEventListener("click", () => {
+    menuModal.classList.remove("active");
+    header.classList.remove("headerHidden");
+});
+
+const menuLinks = document.querySelectorAll(".menuModal a");
+
+menuLinks.forEach(link => {
+    link.addEventListener("click", () => {
+        menuModal.classList.remove("active");
+        header.classList.remove("headerHidden");
+
+        document.body.style.overflow = "auto";
+    });
+});

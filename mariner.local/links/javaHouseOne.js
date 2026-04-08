@@ -8,6 +8,7 @@ class Carousel {
             this.indicators = this.container.querySelectorAll('.indicator');
             this.slides = this.container.querySelectorAll('.mainFourSlide');
             this.texts = this.container.querySelectorAll('.mainFourSlideText');
+
             this.currentIndex = 0;
             this.totalSlides = this.slides.length;
             this.autoPlayInterval = null;
@@ -71,3 +72,17 @@ class Carousel {
     }
     new Carousel();
 });
+
+const openBtn = document.querySelector(".parameters");
+const modal = document.getElementById("modal");
+const closeBtn = document.getElementById("closeModal");
+
+openBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    modal.classList.add("active");
+});
+
+closeBtn.addEventListener("click", () => {
+    modal.classList.remove("active");
+});
+

@@ -1,10 +1,4 @@
 <?php
-    // $admin_ip = "127.0.0.1";
-
-    // if ($_SERVER['REMOTE_ADDR'] === $admin_ip) {
-    //     header("Location: admin.php");
-    //     exit;
-    // }
 
     $link = mysqli_connect('MySQL-8.0', 'root', '', 'marinerHouses') or die('Could not connect to database');
 
@@ -17,7 +11,8 @@
             echo "<script>console.log('Email сохранен: " . addslashes($_POST['email']) . "');</script>";
             echo "<script>alert('Спасибо! Ваш email отправлен нам. В течение суток мы с вами свяжемся!');</script>";
         }
-}
+    }
+
 ?>
 
 
@@ -31,7 +26,7 @@
 </head>
 <body>
 
-<header>
+<header id="header">
     <div class="headerLeft">
         <a href="#"><img src="images/логотип.png" alt="" width="240px"></a>
     </div>
@@ -47,7 +42,7 @@
     </div>
 </header>
 
-<div class="mainOne">
+<div class="mainOne" id="mainOne">
     <div class="image"></div>
     <div class="textMainOne">
         <h1><span>новая жизнь</span> там,</h1>
@@ -387,11 +382,48 @@
             <p>© sergienko daria все права защищены</p>
         </div>
         <div class="footerBottomRight">
-            <a href="">вернуться к началу</a>
+            <a href="#mainOne">вернуться к началу</a>
             <a href="#mainOne"><img src="images/Up.png" alt=""></a>
         </div>
     </div>
 </footer>
+
+<div class="menuModal" id="menuModal">
+    <div class="menuContent">
+        <div class="menuLeft">
+            <img src="images/логотип.png" class="menuLogo">
+            <div class="menuTop">
+                <div class="menuBlock">
+                    <h2>НАВИГАЦИЯ</h2>
+                    <nav class="menuNav">
+                        <a href="#mainTwo">О ПРОЕКТЕ</a>
+                        <a href="#mainFour">АРХИТЕКТУРА</a>
+                        <a href="#mainFive">ВИДЫ</a>
+                        <a href="#mainSix">ИНФРАСТРУКТУРА</a>
+                        <a href="#footer">КОНТАКТЫ</a>
+                    </nav>
+                </div>
+                <div class="menuBlock">
+                    <h2>ДОМА</h2>
+                    <div class="menuHouses">
+                        <a href="housesInMap.php">ДОМА НА КАРТЕ</a>
+                        <a href="housesParameters.php">ВЫБОР ПО ПАРАМЕТРАМ</a>
+                    </div>
+                </div>
+            </div>
+            <div class="menuBottom">
+                <h2>КОНТАКТЫ</h2>
+                <div class="menuContacts">
+                    <p>+7 906 236 20 14</p>
+                    <p>MARINERHOUSES@GMAIL.COM</p>
+                    <p>SERDUSIK@GMAIL.COM</p>
+                </div>
+            </div>
+        </div>
+        <div class="menuRight"></div>
+        <button class="menuClose" id="closeMenu">✕</button>
+    </div>
+</div>
 
 <script src="java.js"></script>
 

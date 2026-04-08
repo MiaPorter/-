@@ -55,6 +55,17 @@
     $where
     ");
 
+    if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['email'])) {
+        if (!$link->connect_error) {
+            $email = $link->real_escape_string($_POST['email']);
+            $link->query("INSERT INTO feedback (email) VALUES ('$email')");
+            $link->close();
+            
+            echo "<script>console.log('Email сохранен: " . addslashes($_POST['email']) . "');</script>";
+            echo "<script>alert('Спасибо! Ваш email отправлен нам. В течение суток мы с вами свяжемся!');</script>";
+        }
+    }
+
 ?>
 
 <!DOCTYPE html>
@@ -67,7 +78,7 @@
 </head>
 <body>
 
-<header>
+<header id="header">
     <div class="headerLeft">
         <a href="#"><img src="images/логотип.png" alt="" width="240px"></a>
     </div>
@@ -76,7 +87,7 @@
     </div>
 </header>
 
-<div class="mainOne">
+<div class="mainOne" id="mainOne">
     <div class="mainOneLeft">
         <img src="images/arrows.png" alt="">
     </div>
@@ -136,8 +147,8 @@
                 </div>
                 <div class="range-slider">
                     <div class="slider-track"></div>
-                    <input type="range" id="minRange" name="price_from" value="<?= $_GET['price_from'] ?? 32567213559 ?>" min="32567213559" max="481394023435" step="1000000000">
-                    <input type="range" id="maxRange" name="price_to" value="<?= $_GET['price_to'] ?? 481394023435 ?>" min="32567213559" max="481394023435" step="1000000000">
+                    <input type="range" id="minRange" name="price_from" value="<?= $_GET['price_from'] ?? 32567213559 ?>" min="32567213559" max="483394023435" step="1000000000">
+                    <input type="range" id="maxRange" name="price_to" value="<?= $_GET['price_to'] ?? 481394023435 ?>" min="32567213559" max="483394023435" step="1000000000">
                 </div>
                 <button type="submit">Показать</button>
             </form>
@@ -157,8 +168,8 @@
                 </div>
                 <div class="range-slider">
                     <div class="slider-track-area"></div>
-                    <input type="range" id="minAreaRange" name="area_from" value="<?= $_GET['area_from'] ?? 128 ?>" min="128" max="259" step="1">
-                    <input type="range" id="maxAreaRange" name="area_to" value="<?= $_GET['area_to'] ?? 259 ?>" min="128" max="259" step="1">
+                    <input type="range" id="minAreaRange" name="area_from" value="<?= $_GET['area_from'] ?? 128 ?>" min="128" max="260" step="1">
+                    <input type="range" id="maxAreaRange" name="area_to" value="<?= $_GET['area_to'] ?? 259 ?>" min="128" max="260" step="1">
                 </div>
                 <button type="submit">Показать</button>
             </form>
@@ -201,11 +212,11 @@
 <footer>
     <div class="footerTop" id="footer">
         <div class="footerTopLeft">
-            <a href="#" class="logoFooter"><img src="images/логотип.png" alt="" width="290px"></a>
+            <a href="#" class="logoFooter"><img src="../images/логотип.png" alt="" width="290px"></a>
             <div class="messengers">
-                <a href="#"><img src="images/Telegram.png" alt="" width="60px"></a>
-                <a href="#"><img src="images/VK Circled.png" alt="" width="60px"></a>
-                <a href="#"><img src="images/Odnoklassniki Circled.png" alt="" width="60px"></a>
+                <a href="#"><img src="../images/Telegram.png" alt="" width="60px"></a>
+                <a href="#"><img src="../images/VK Circled.png" alt="" width="60px"></a>
+                <a href="#"><img src="../images/Odnoklassniki Circled.png" alt="" width="60px"></a>
             </div>
         </div>
         <div class="footerTopMiddle">
@@ -229,11 +240,48 @@
             <p>© sergienko daria все права защищены</p>
         </div>
         <div class="footerBottomRight">
-            <a href="">вернуться к началу</a>
-            <a href="#mainOne"><img src="images/Up.png" alt=""></a>
+            <a href="#mainOne">вернуться к началу</a>
+            <a href="#mainOne"><img src="../images/Up.png" alt=""></a>
         </div>
     </div>
 </footer>
+
+<div class="menuModal" id="menuModal">
+    <div class="menuContent">
+        <div class="menuLeft">
+            <img src="images/логотип.png" class="menuLogo">
+            <div class="menuTop">
+                <div class="menuBlock">
+                    <h2>НАВИГАЦИЯ</h2>
+                    <nav class="menuNav">
+                        <a href="#mainTwo">О ПРОЕКТЕ</a>
+                        <a href="#mainFour">АРХИТЕКТУРА</a>
+                        <a href="#mainFive">ВИДЫ</a>
+                        <a href="#mainSix">ИНФРАСТРУКТУРА</a>
+                        <a href="#footer">КОНТАКТЫ</a>
+                    </nav>
+                </div>
+                <div class="menuBlock">
+                    <h2>ДОМА</h2>
+                    <div class="menuHouses">
+                        <a href="housesInMap.php">ДОМА НА КАРТЕ</a>
+                        <a href="housesParameters.php">ВЫБОР ПО ПАРАМЕТРАМ</a>
+                    </div>
+                </div>
+            </div>
+            <div class="menuBottom">
+                <h2>КОНТАКТЫ</h2>
+                <div class="menuContacts">
+                    <p>+7 906 236 20 14</p>
+                    <p>MARINERHOUSES@GMAIL.COM</p>
+                    <p>SERDUSIK@GMAIL.COM</p>
+                </div>
+            </div>
+        </div>
+        <div class="menuRight"></div>
+        <button class="menuClose" id="closeMenu">✕</button>
+    </div>
+</div>
 
 <script src="javaParameters.js"></script>
     
