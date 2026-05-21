@@ -94,7 +94,7 @@
 
 <div class="mainOne">
     <div class="mainOneLeft">
-        <img src="images/arrows.png" alt="">
+        <img src="images/arrows.png" alt="" width="500px">
     </div>
     <div class="mainOneRight">
         <h2>АДМИН <span>ПАНЕЛЬ</span></h2>

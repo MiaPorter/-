@@ -1062,67 +1062,53 @@ form button {
     transition: 0.3s;
 }
 
-/* =======================
-   📱 MOBILE VERSION
-======================= */
-@media (max-width: 768px) {
+/* //АДАПТИВ */
 
-    /* Общие */
+@media (max-width: 768px) {
     body {
         overflow-x: hidden;
     }
-
     h1, h2 {
         font-size: 28px !important;
         line-height: 1.2;
     }
-
     p {
         font-size: 16px !important;
     }
 
-    /* HEADER */
     header {
         height: 70px;
         margin-top: 0;
         padding: 10px;
         justify-content: space-between;
     }
-
     .headerMiddle {
-        display: none; /* убираем меню */
+        display: none;
     }
-
     .headerRight {
         width: auto;
         height: auto;
         background: none;
     }
-
     .headerRight a {
         font-size: 20px;
     }
-
     .headerLeft img {
         width: 150px;
     }
 
-    /* MAIN ONE */
     .mainOne {
         height: auto;
     }
-
     .image {
         height: 500px;
     }
-
     .textMainOne {
         width: 90%;
         margin: -350px auto 0;
         text-align: center;
         font-size: 28px;
     }
-
     .mainOne button {
         width: 90%;
         height: 60px;
@@ -1130,22 +1116,18 @@ form button {
         margin: 20px auto;
         display: block;
     }
-
     .textLeftBottom {
         margin: 20px;
         font-size: 16px;
     }
-
     .imgArrow {
         display: none;
     }
 
-    /* MAIN TWO */
     .mainTwo {
         height: auto;
         margin-top: 100px;
     }
-
     .mainTwoFirstBlock,
     .mainTwoSecondBlock,
     .mainTwoThirdBlock {
@@ -1153,20 +1135,17 @@ form button {
         align-items: center;
         margin-top: 50px;
     }
-
     .mainTwo img {
         width: 90% !important;
         margin: 0;
         position: static;
     }
-
     .h2TextOne h2,
     .h2TextTwo h2,
     .h2TextThree h2 {
         font-size: 120px;
         text-align: center;
     }
-
     .textOne h2,
     .textTwo h2,
     .textThree h2 {
@@ -1174,7 +1153,6 @@ form button {
         margin: 0;
         text-align: center;
     }
-
     .textOne p,
     .textTwo p,
     .textThree p {
@@ -1182,27 +1160,22 @@ form button {
         margin: 0;
     }
 
-    /* MAIN THREE */
     .mainThree {
         flex-direction: column;
         margin-top: 200px;
         padding: 20px;
     }
-
     .mainThreeImage {
         flex: none;
         width: 100%;
     }
-
     .mainThreeImage img {
         width: 100%;
     }
-
     .mainThreeTextMainText {
         width: 100%;
     }
 
-    /* MAIN FOUR */
     .mainFourSlideText,
     .mainFourSlideTextTwo {
         width: 90%;
@@ -1210,28 +1183,23 @@ form button {
         margin-left: 5%;
         padding: 15px;
     }
-
     .mainFourSlideText {
         font-size: 22px;
         top: 100px;
     }
-
     .mainFourSlideTextTwo {
         top: 180px;
         font-size: 14px;
     }
-
     .indicator {
         width: 80px;
     }
 
-    /* MAIN FIVE */
     .mainFive h2 {
         width: 90%;
         font-size: 32px;
         padding-top: 150px;
     }
-
     .mainFive button {
         width: 90%;
         height: 60px;
@@ -1239,62 +1207,50 @@ form button {
         margin-left: 5%;
     }
 
-    /* MAIN SIX */
     .mainSixTop {
         flex-direction: column;
         align-items: center;
         text-align: center;
     }
-
     .mainSixTopRight h2 {
         width: 90%;
         font-size: 32px;
         margin: 0;
     }
-
     .mainSixTopRight p {
         width: 90%;
         font-size: 18px;
         margin: 10px auto;
     }
-
     .mainSixBottom div {
         width: 90% !important;
         margin-bottom: 20px;
     }
-
     .mainSixBottom .top {
         font-size: 20px;
     }
-
     .mainSixBottom .bottom {
         font-size: 14px;
     }
 
-    /* MAIN SEVEN */
     .mainSevenTop h2 {
         width: 90%;
         font-size: 32px;
         margin-left: 5%;
     }
-
     .mainSevenTop p {
         width: 90%;
         font-size: 18px;
         margin-left: 5%;
     }
-
-    /* MAIN EIGHT */
     .mainEight h2 {
         width: 90%;
         font-size: 32px;
     }
-
     .btns {
         flex-direction: column;
         gap: 15px;
     }
-
     .btn-left,
     .btn-right {
         width: 90%;
@@ -1302,18 +1258,15 @@ form button {
         font-size: 18px;
     }
 
-    /* FOOTER */
     footer {
         height: auto;
         padding-bottom: 30px;
     }
-
     .footerTop {
         flex-direction: column;
         align-items: center;
         text-align: center;
     }
-
     .footerTopMiddle,
     .footerTopRight {
         margin-top: 30px;
