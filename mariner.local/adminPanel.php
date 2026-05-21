@@ -41,31 +41,31 @@
 
     // ИЗМЕНЕНИЕ
     if (isset($_POST['edit'])) {
-    $id = $_POST['id'];
-    $title = $_POST['title'];
-    $price = $_POST['price'];
-    $area = $_POST['area'];
-    $rooms = $_POST['rooms'];
-    $floors = $_POST['floors'];
-    $decoration = $_POST['decoration'];
-    $image = $_POST['image'];
-    $link_house = $_POST['link'];
+        $id = $_POST['id'];
+        $title = $_POST['title'];
+        $price = $_POST['price'];
+        $area = $_POST['area'];
+        $rooms = $_POST['rooms'];
+        $floors = $_POST['floors'];
+        $decoration = $_POST['decoration'];
+        $image = $_POST['image'];
+        $link_house = $_POST['link'];
 
-    mysqli_query($link, "
-    UPDATE houses SET
-    title_house='$title',
-    price_house='$price',
-    area_houses='$area',
-    number_rooms='$rooms',
-    number_floors='$floors',
-    decoration_houses='$decoration',
-    image_houses='$image',
-    link_houses='$link_house'
-    WHERE id_house = $id
-    ");
+        mysqli_query($link, "
+        UPDATE houses SET
+        title_house='$title',
+        price_house='$price',
+        area_houses='$area',
+        number_rooms='$rooms',
+        number_floors='$floors',
+        decoration_houses='$decoration',
+        image_houses='$image',
+        link_houses='$link_house'
+        WHERE id_house = $id
+        ");
 
-    header("Location: " . $_SERVER['PHP_SELF']);
-    exit();
+        header("Location: " . $_SERVER['PHP_SELF']);
+        exit();
     }
 
     $result = mysqli_query($link, "SELECT * FROM houses");

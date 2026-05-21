@@ -40,7 +40,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>МАРИНЕР - дом 1</title>
+    <title>МАРИНЕР - дом 9</title>
     <link rel="stylesheet" href="../styles/styleHouseOne.css">
 </head>
 <body>
@@ -215,7 +215,7 @@
 
 <div class="modal" id="modal">
     <div class="modalContent">
-        <button class="closeBtn" id="closeModal">✕</button>
+        <button type="button" class="closeBtn" id="closeModal">✕</button>
         <h2>ЗАКАЗАТЬ ЗВОНОК</h2>
         <form method="POST">
             <input type="text" name="name_user" placeholder="Ваше имя" required>
@@ -223,6 +223,43 @@
             <input type="email" name="email_user" placeholder="Email" required>
             <button type="submit" class="sendBtn">Отправить</button>
         </form>
+    </div>
+</div>
+
+<div class="menuModal" id="menuModal">
+    <div class="menuContent">
+        <div class="menuLeft">
+            <img src="../images/логотип.png" class="menuLogo">
+            <div class="menuTop">
+                <div class="menuBlock">
+                    <h2>НАВИГАЦИЯ</h2>
+                    <nav class="menuNav">
+                        <a href="https://mariner.local/index.php#mainTwo">О ПРОЕКТЕ</a>
+                        <a href="https://mariner.local/index.php#mainFour">АРХИТЕКТУРА</a>
+                        <a href="https://mariner.local/index.php#mainFive">ВИДЫ</a>
+                        <a href="https://mariner.local/index.php#mainSix">ИНФРАСТРУКТУРА</a>
+                        <a href="https://mariner.local/index.php#footer">КОНТАКТЫ</a>
+                    </nav>
+                </div>
+                <div class="menuBlock">
+                    <h2>ДОМА</h2>
+                    <div class="menuHouses">
+                        <a href="https://mariner.local/housesInMap.php">ДОМА НА КАРТЕ</a>
+                        <a href="https://mariner.local/housesParameters.php">ВЫБОР ПО ПАРАМЕТРАМ</a>
+                    </div>
+                </div>
+            </div>
+            <div class="menuBottom">
+                <h2>КОНТАКТЫ</h2>
+                <div class="menuContacts">
+                    <p>+7 906 236 20 14</p>
+                    <p>MARINERHOUSES@GMAIL.COM</p>
+                    <p>SERDUSIK@GMAIL.COM</p>
+                </div>
+            </div>
+        </div>
+        <div class="menuRight"></div>
+        <button class="menuClose" id="closeMenu">✕</button>
     </div>
 </div>
 

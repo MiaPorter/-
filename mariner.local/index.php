@@ -94,7 +94,7 @@
     <div class="mainTwoThirdBlock">
         <div class="mainTwoThirdBlockLeft">
             <div class="h2TextThree">
-                <h2>02</h2>
+                <h2>03</h2>
             </div>
             <div class="textThree">
                 <h2>15 000</h2>
@@ -196,7 +196,7 @@
 <div class="mainSix" id="mainSix">
     <div class="mainSixTop">
         <div class="mainSixTopLeft">
-            <img src="images/arrows.png" alt="">
+            <img src="images/arrows.png" alt="" width="500px">
         </div>
         <div class="mainSixTopRight">
             <h2><span>Инфраструктура</span> будущего — уже сегодня</h2>
@@ -396,18 +396,18 @@
                 <div class="menuBlock">
                     <h2>НАВИГАЦИЯ</h2>
                     <nav class="menuNav">
-                        <a href="#mainTwo">О ПРОЕКТЕ</a>
-                        <a href="#mainFour">АРХИТЕКТУРА</a>
-                        <a href="#mainFive">ВИДЫ</a>
-                        <a href="#mainSix">ИНФРАСТРУКТУРА</a>
-                        <a href="#footer">КОНТАКТЫ</a>
+                        <a href="https://mariner.local/index.php#mainTwo">О ПРОЕКТЕ</a>
+                        <a href="https://mariner.local/index.php#mainFour">АРХИТЕКТУРА</a>
+                        <a href="https://mariner.local/index.php#mainFive">ВИДЫ</a>
+                        <a href="https://mariner.local/index.php#mainSix">ИНФРАСТРУКТУРА</a>
+                        <a href="https://mariner.local/index.php#footer">КОНТАКТЫ</a>
                     </nav>
                 </div>
                 <div class="menuBlock">
                     <h2>ДОМА</h2>
                     <div class="menuHouses">
-                        <a href="housesInMap.php">ДОМА НА КАРТЕ</a>
-                        <a href="housesParameters.php">ВЫБОР ПО ПАРАМЕТРАМ</a>
+                        <a href="https://mariner.local/housesInMap.php">ДОМА НА КАРТЕ</a>
+                        <a href="https://mariner.local/housesParameters.php">ВЫБОР ПО ПАРАМЕТРАМ</a>
                     </div>
                 </div>
             </div>

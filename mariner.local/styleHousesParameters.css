@@ -4,6 +4,13 @@
     font-family: 'Pobeda';
     color: #EEEEEE;
 }
+
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+
 @font-face {
     font-family: 'Pobeda';
     src: url('../fonts/ofont.ru_Pobeda_bold.ttf');
@@ -167,8 +174,7 @@ input[type="range"]::-webkit-slider-thumb {
     margin-top: 40px;
 }
 .filtersRight .sbrosFilters {
-    margin-top: 800px;
-    margin-left: -855px;
+    margin-left: -775px;
     font-size: 20px;
     text-decoration: none;
     color: #7c7c7c;

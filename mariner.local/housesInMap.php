@@ -1,18 +1,18 @@
 <?php
 
-$link = mysqli_connect('MySQL-8.0', 'root', '', 'marinerHouses') or die('Could not connect to database');
-    $result = mysqli_query($link, 
-    "SELECT houses.id_house, decoration.decoration_houses, houses.title_house, houses.price_house, houses.area_houses, houses.number_rooms, houses.number_floors, houses.image_houses, houses.link_houses
-    FROM houses
-    LEFT JOIN decoration 
-    ON houses.decoration_houses = decoration.id_decoration"
-);
+    $link = mysqli_connect('MySQL-8.0', 'root', '', 'marinerHouses') or die('Could not connect to database');
+        $result = mysqli_query($link, 
+        "SELECT houses.id_house, decoration.decoration_houses, houses.title_house, houses.price_house, houses.area_houses, houses.number_rooms, houses.number_floors, houses.image_houses, houses.link_houses
+        FROM houses
+        LEFT JOIN decoration 
+        ON houses.decoration_houses = decoration.id_decoration"
+    );
 
-$result = mysqli_query($link, "SELECT * FROM houses");
-$houses = [];
-while ($row = mysqli_fetch_assoc($result)) {
-    $houses[] = $row;
-}
+    $result = mysqli_query($link, "SELECT * FROM houses");
+    $houses = [];
+    while ($row = mysqli_fetch_assoc($result)) {
+        $houses[] = $row;
+    }
 
 ?>
 <script>
@@ -67,7 +67,6 @@ while ($row = mysqli_fetch_assoc($result)) {
     </div>
     </div>
 </div>
-
 
 <footer>
     <div class="footerTop" id="footer">

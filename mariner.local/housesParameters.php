@@ -89,7 +89,7 @@
 
 <div class="mainOne" id="mainOne">
     <div class="mainOneLeft">
-        <img src="images/arrows.png" alt="">
+        <img src="images/arrows.png" alt="" width="500px">
     </div>
     <div class="mainOneRight">
         <h2>ВЫБОР ПО <span>ПАРАМЕТРАМ</span></h2>

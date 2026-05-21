@@ -76,63 +76,63 @@ header {
 .one {
     position: absolute;
     top: 186px;
-    margin-left: 100px;
+    margin-left: 20px;
     opacity: 0;
     transition: 0.3s;
 }
 .two {
     position: absolute;
     top: 118px;
-    margin-left: 460px;
+    margin-left: 380px;
     opacity: 0;
     transition: 0.3s;
 }
 .three {
     position: absolute;
     top: 60px;
-    margin-left: 765px;
+    margin-left: 685px;
     opacity: 0;
     transition: 0.3s;
 }
 .four {
     position: absolute;
     top: 399px;
-    margin-left: 267px;
+    margin-left: 187px;
     opacity: 0;
     transition: 0.3s;
 }
 .five {
     position: absolute;
     top: 225px;
-    margin-left: 734px;
+    margin-left: 654px;
     opacity: 0;
     transition: 0.3s;
 }
 .six {
     position: absolute;
     top: 97px;
-    margin-left: 1029px;
+    margin-left: 949px;
     opacity: 0;
     transition: 0.3s;
 }
 .seven {
     position: absolute;
     top: 539px;
-    margin-left: 652px;
+    margin-left: 572px;
     opacity: 0;
     transition: 0.3s;
 }
 .eight {
     position: absolute;
     top: 351px;
-    margin-left: 1072px;
+    margin-left: 992px;
     opacity: 0;
     transition: 0.3s;
 }
 .nine {
     position: absolute;
     top: 161px;
-    margin-left: 1302px;
+    margin-left: 1222px;
     opacity: 0;
     transition: 0.3s;
 }

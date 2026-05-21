@@ -73,16 +73,52 @@ class Carousel {
     new Carousel();
 });
 
-const openBtn = document.querySelector(".parameters");
-const modal = document.getElementById("modal");
-const closeBtn = document.getElementById("closeModal");
+document.addEventListener("DOMContentLoaded", () => {
+    const openBtn = document.querySelector(".parameters");
+    const modal = document.getElementById("modal");
+    const closeBtn = document.getElementById("closeModal");
 
-openBtn.addEventListener("click", (e) => {
+    if (openBtn) {
+        openBtn.addEventListener("click", (e) => {
+            e.preventDefault();
+            modal.classList.add("active");
+        });
+    }
+    if (closeBtn) {
+        closeBtn.addEventListener("click", () => {
+            modal.classList.remove("active");
+        });
+    }
+    modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+            modal.classList.remove("active");
+        }
+    });
+});
+
+const menuBtn = document.querySelector(".headerRight a");
+const menuModal = document.getElementById("menuModal");
+const closeMenu = document.getElementById("closeMenu");
+const header = document.getElementById("header");
+
+menuBtn.addEventListener("click", (e) => {
     e.preventDefault();
-    modal.classList.add("active");
+    menuModal.classList.add("active");
+    header.classList.add("headerHidden");
 });
 
-closeBtn.addEventListener("click", () => {
-    modal.classList.remove("active");
+closeMenu.addEventListener("click", () => {
+    menuModal.classList.remove("active");
+    header.classList.remove("headerHidden");
 });
 
+const menuLinks = document.querySelectorAll(".menuModal a");
+
+menuLinks.forEach(link => {
+    link.addEventListener("click", () => {
+        menuModal.classList.remove("active");
+        header.classList.remove("headerHidden");
+
+        document.body.style.overflow = "auto";
+    });
+});
